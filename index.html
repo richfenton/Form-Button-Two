@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+#myDIV {
+  width: 50%;
+  padding: 50px 0;
+  text-align: left;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+
+button1 {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  background-color: red;
+  margin-top: 20px;
+  }
+  
+button {
+  width: 50%;
+  padding: 30px 0;
+  text-align: center;
+  background-color: pink;
+  margin-top: 20px;
+  }
+
+</style>
+</head>
+<body>
+
+
+<button1 onclick="myFunction()">Cant Afford the Minimum Payment, Make an Offer</button1><br><br><br><br>
+
+<div id="myDIV">
+<form
+   action="https://formspree.io/f/xnqwjjpv" method="POST">
+  <label for="DebtID">Please provide your Zinc reference number:</label><br>
+  <input type="text" id="DebtID" name="DebtID" value=""><br><br>
+  <label for="PmtOff">Insert your payment offer amount:</label><br>
+  <input type="text" id="PmtOff" name="PmtOff" value="£"><br><br>
+  <input type="radio" id="weekly" name="pmt-frq" value="Weekly">
+  <label for="html">Weekly</label>
+  <input type="radio" id="Monthly" name="fav_language" value="Monthly">
+  <label for="css">Monthly</label><br><br>
+  <button type="submit">Send Your Payment Offer</button>
+</form>
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
