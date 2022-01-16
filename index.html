@@ -8,10 +8,17 @@
   width: 100%;
   padding: 20px 50px;
   text-align: center;
-  background-color: lightblue;
-  margin-top: 10px;
+  background-color: #A9AAAE;
+  margin-top 10px;
   display: none;
-  font-size: 16px;
+  font-size: 20px;
+  color: black;
+}
+
+input[type=text] {
+  text-align: left;
+  width: 25%;
+  font-weight: bold;
 }
 
 button {
@@ -26,24 +33,23 @@ button {
   position: relative;
   color: white;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 18px;
   }
 
 button1 {
    display: block; 
-   font-size: 16px;
+   font-size: 18px;
    border: solid;
    border-color:#000000; 
    color: white;
    list-style-type: none; 
-   margin: auto; !i
+   margin: auto;
    position: relative; 
    text-align: center; 
    width: 600px; 
    height: 90px; 
    border-radius: 20px;  
    background-color: #0076C1;
-   overflow: hidden;
    padding-top: 15px; 
    padding-right: 5px;
    padding-left: 5px;
@@ -59,17 +65,19 @@ button1 {
 <div id="myDIV">
 <form
    action="https://formspree.io/f/xnqwjjpv" method="POST">
-  <label for="DebtID">Please provide your Zinc reference number:</label><br>
-  <input type="text" id="DebtID" name="DebtID" value=""><br><br>
+  <label for="DebtID">This is your Zinc reference number:</label><br>
+  <input type="text" id="DebtID" name="DebtID" value="{{DebtID}}"><br><br>
   <label for="PmtOff">Insert your payment offer amount:</label><br>
   <input type="text" id="PmtOff" name="PmtOff" value="£"><br><br>
-  <input type="radio" id="weekly" name="pmt-frq" value="Weekly">
+	<b> Select Your Payment Frequency </b>
+	<input type="radio" id="weekly" name="pmt-frq" value="Weekly">
   <label for="html">Weekly</label>
-  <input type="radio" id="Monthly" name="fav_language" value="Monthly">
+  <input type="radio" id="Monthly" name="pmt-frq" value="Monthly">
   <label for="css">Monthly</label><br><br>
   <button type="submit">Send Your Payment Offer</button>
 </form>
 </div>
+
 
 
 <script>
